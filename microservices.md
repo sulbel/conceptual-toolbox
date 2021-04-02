@@ -25,6 +25,13 @@ At a fundamental level, microservices expose a limited API, which provides a sim
 
 Microservices allow flexibility in terms of infrastructure and deployment; application traffic is routed to collections of services that may be distributed across CPU’s, disks, machines and networks as opposed to a single monolithic platform designed to manage all traffic.
 
+### Remote Procedure Calls (RPC)
+* Technique for making a local call and having it execute on a remote collaborator
+![RPC flow](https://dzone.com/storage/temp/9773666-0.jpg)
+* Typically RPC utilizes a delegate as part of the callback process
+* The core idea of RPC is to hide the complexity of the remote call
+
+
 
 #### References
 https://dzone.com/articles/an-introduction-to-microservices
