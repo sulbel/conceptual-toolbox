@@ -45,6 +45,28 @@ Where are linked lists used?
   * O(1) for doubly
 * Removing in middle is O(n) for both
 
+# Stack
+What is a stack?
+* A one-ended linear data structure with 2 primary operations: **push** and **pop**
+* **LIFO** - the last object *pushed* onto the stack is the first object *popped* from the stack
+
+When and where to use stack?
+* Undo mechanisms e.g. in text editors
+* Check for matching, closing brackets in compiler syntax checking
+* Can be used to model a pile of books or plates
+* Behind the scenes, supports recursion by keeping track of previous function calls
+* Can be used to do a depth first search (DFS) on a graph
+
+
+### Complexity Analysis
+Operation | O()
+----------|-----
+Pushing | O(1)
+Popping | O(1)
+Peeking | O(1)
+Searching | O(n)
+Size | O(1)
+
 
 # References
 https://github.com/williamfiset/Algorithms
