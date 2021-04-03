@@ -67,6 +67,27 @@ Peeking | O(1)
 Searching | O(n)
 Size | O(1)
 
+# Queues
+What is a queue?
+* A linear data structure with 2 primary operations: **enqueue** and **dequeue**
+* **FIFO** - the first object **enqueued** is the first object **dequeued**
+
+When and where are queues used?
+* Any waiting line models a queue e.g. at a restaurant or movie theatre
+* Efficiently keeps track of the x-most recently added elements
+* Web server request management, where you want to serve the incoming requests that came earliest
+* Breadth first search (BFS) graph traversal
+
+### Complexity Analysis
+Operation | O()
+----------|-----
+Enqueue | O(1)
+Dequeue | O(1)
+peeking | O(1)
+Contains | O(n)
+Removal | O(n)
+Is Empty? | O(1)
+
 
 # References
 https://github.com/williamfiset/Algorithms
