@@ -27,7 +27,9 @@ Microservices allow flexibility in terms of infrastructure and deployment; appli
 
 ### Remote Procedure Calls (RPC)
 * Technique for making a local call and having it execute on a remote collaborator
-![RPC flow](https://dzone.com/storage/temp/9773666-0.jpg)
+
+  ![RPC flow](https://dzone.com/storage/temp/9773666-0.jpg)
+  
 * Typically RPC utilizes a delegate as part of the callback process
 * The core idea of RPC is to hide the complexity of the remote call
 
