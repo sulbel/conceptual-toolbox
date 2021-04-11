@@ -18,3 +18,4 @@ Encapsulation should be used for several reasons:
 * data inside the object is not modified unexpectantly by outside code
 * can use the same method on several, differently-valued objects
 
+## **Abstraction**
