@@ -19,3 +19,6 @@ Encapsulation should be used for several reasons:
 * can use the same method on several, differently-valued objects
 
 ## **Abstraction**
+* Like encapsulation because it hides certain properties and methods from the outside code to make the interface of the objects simpler.
+* Overall, abstraction helps isolate the impact of changes made to the code so that if something goes wrong, the change will only affect the variables shown and not the outside code.
+
