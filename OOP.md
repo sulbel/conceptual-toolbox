@@ -6,7 +6,7 @@ Object-oriented programming combines a group of variables (properties) and funct
 
 # Main Concepts
 
-## **Encapsulation**
+## Encapsulation
 * Encapsulation is a way to bundle data with the methods that interact with the data
   * Gives rise to `getter` and `setter` methods
 * Data inside an object should only be accessible via a *public interface*
@@ -18,7 +18,12 @@ Encapsulation should be used for several reasons:
 * data inside the object is not modified unexpectantly by outside code
 * can use the same method on several, differently-valued objects
 
-## **Abstraction**
+## Abstraction
 * Like encapsulation because it hides certain properties and methods from the outside code to make the interface of the objects simpler.
 * Overall, abstraction helps isolate the impact of changes made to the code so that if something goes wrong, the change will only affect the variables shown and not the outside code.
+
+## Inheritance
+* Can extend the functionality of the code's existing classes to eliminate repetitive code.
+  * Instead of redefining the properties and methods for every type of HTML element, you can define them once in a generic object.
+* Subclasses inherit elements from a *superclass* while implementing additional elements which are unique to the *subclass*.
 
