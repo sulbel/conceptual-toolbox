@@ -27,3 +27,7 @@ Encapsulation should be used for several reasons:
   * Instead of redefining the properties and methods for every type of HTML element, you can define them once in a generic object.
 * Subclasses inherit elements from a *superclass* while implementing additional elements which are unique to the *subclass*.
 
+## Polymorphism
+* This concept allows one to redefine the way something works by changing how it is done or changing the parts in which it is done.
+  * Overloading - babies first learn to crawl using their arms and legs.  Once they learn to walk using only their legs, is similar to the concept of overloading
+  * Overriding - suppose you are walking forwards, then change direction and start walking backwards.  This action changes the direction and functionality of walking, similar to the concept of overriding
