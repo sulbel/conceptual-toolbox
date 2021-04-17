@@ -15,3 +15,8 @@ By building on top of HTTP, REST APIs provide the means to build:
 * A spectrum of stateless to stateful services
 
 REST is not a standard, per se, but **an approach**, a style, a set of constraints on your architecture that can help you build web-scale systems.
+
+# What makes something RESTful?
+"What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint? In other words, if the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and cannot be a REST API. Period. Is there some broken manual somewhere that needs to be fixed?" - Roy Felding
+
+* The side effect of **not** including hypermedia in representations, is that clients *MUST* hard code URIs to navigate the API.
