@@ -14,3 +14,9 @@ The Spring Data `JpaRepository` makes CRUD operations extremely simple.  By decl
 `interface EmployeeRepository extends JpaRepository<Employee, Long> {`
 
 `}`
+
+## Spring MVC
+For wrapping spring projects (like a data repository) with a web layer
+
+## Spring HATEOAS
+A Spring project aimed at helping you write hypermedia-driven outputs
