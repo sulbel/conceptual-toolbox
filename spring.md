@@ -17,10 +17,10 @@ The Spring Data `JpaRepository` makes CRUD operations extremely simple.  By decl
 
 ## Spring MVC
 For wrapping spring projects (like a data repository) with a web layer
+* `ResponseEntity` creates a status message, which typically includes a **location** response header
 
 ## Spring HATEOAS
 A Spring project aimed at helping you write hypermedia-driven outputs
 * EntityModel<> is a generic container from Spring HATEOAS that includes not only data, but also a collection of links
 * CollectionModel<> is another HATEOAS container; it is aimed at **encapsulating collections** of resources, instead of a single resource entity like EntityModel<>.
   * **IMPORTANT** - encapsulates collections of **resources** 
-
