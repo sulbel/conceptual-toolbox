@@ -41,3 +41,12 @@ Suppose the need for splitting a single `name` attribute into 2 attributes, `fir
 * Add new fields to the JSON representations, but don't take any away
   * This duplication supports both new clients and old clients
   * Can upgrade the server without requiring clients to upgrade at the same time
+
+# HTTP Codes
+Code | Meaning
+-----|---------
+200 | OK
+201 | Created
+204 | No content
+405 | Method not allowed
+
