@@ -24,3 +24,5 @@ A Spring project aimed at helping you write hypermedia-driven outputs
 * EntityModel<> is a generic container from Spring HATEOAS that includes not only data, but also a collection of links
 * CollectionModel<> is another HATEOAS container; it is aimed at **encapsulating collections** of resources, instead of a single resource entity like EntityModel<>.
   * **IMPORTANT** - encapsulates collections of **resources** 
+* Instead of clients parsing the payload, give them links to signal valid actions. Decouple state-based actions from the payload of data. In other words, when CANCEL and COMPLETE are valid actions, dynamically add them to the list of links. Clients only need show users the corresponding buttons when the links exist.
+  * This decouples clients from having to know WHEN such actions are valid, reducing the risk of the server and its clients getting out of sync on the logic of state transitions.
