@@ -31,3 +31,11 @@ Java is an **object oriented language**, that is platform independent.  The **JV
   stringA.equalsIgnoreCase(stringB);
   ```
 
+## Classes
+Template for objects
+* Access Modifiers
+  * Public - can be accessed/modified by any other class in the application, from any package
+  * Private - only accessible from within the same class it is declared
+* Best practice to use getter/setter methods to access/modify private variables
+
+
