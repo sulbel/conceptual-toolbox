@@ -38,4 +38,11 @@ Template for objects
   * Private - only accessible from within the same class it is declared
 * Best practice to use getter/setter methods to access/modify private variables
 
+## Inheritance
+Gives access to the variables and methods of one class to another.  Indicated by usage of the `extends` keyword, e.g. class Magazine extends Book
 
+  * A class in Java can only extend one other class
+  * A child class inherits public and protected items from its parent class, but these can be overridden, e.g. by declaring a method with the same name and parameters
+
+## Polymorphism
+An object is considered an instance of every class in its inheritance chain
