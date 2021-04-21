@@ -18,3 +18,9 @@
   * `SELECT` arbitrary_column_name `AS` my_name
 
 
+## `FROM`
+* The table that the query should run against
+* `JOIN`s are used to run the query against multiple tables
+  * `INNER JOIN` - the commonalities between tables; like the intersection of a venn diagram
+  * `LEFT JOIN` - all rows from the left table, and the common rows from the right table; like the entire left circle and cross-section of a venn diagram
+  * `RIGHT JOIN` - opposite of left join; like the entire right circle and the cross-section of a venn diagram
