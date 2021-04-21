@@ -24,3 +24,26 @@
   * `INNER JOIN` - the commonalities between tables; like the intersection of a venn diagram
   * `LEFT JOIN` - all rows from the left table, and the common rows from the right table; like the entire left circle and cross-section of a venn diagram
   * `RIGHT JOIN` - opposite of left join; like the entire right circle and the cross-section of a venn diagram
+
+## `WHERE`
+* A conditional clause that is used to filter resulting rows in a query
+
+    Operator | Meaning
+    ---------|--------
+    = | Equal to
+    <> | Not equal to
+    < | Less than
+    \> | Greater than
+    <= | Less than or equal to
+    \>= | Greater than or equal to
+
+```
+`SELECT`
+   first_name,
+   last_name
+`FROM`
+  employees
+`WHERE`
+  department_id = 3;
+```
+
