@@ -46,3 +46,13 @@ Gives access to the variables and methods of one class to another.  Indicated by
 
 ## Polymorphism
 An object is considered an instance of every class in its inheritance chain
+
+## Keywords
+* Static - defines class members; **shared across all instances**
+* Final - declares something as immutable
+  * Primitive cariables can't modify values
+  * Reference variables can't switch references
+  * Methods can't be overwritten
+  * Classes can't be extended
+* Abstract - incomplete, missing definition
+  * Cannot be instantiated, **can only be extended**
