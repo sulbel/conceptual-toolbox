@@ -25,7 +25,14 @@ Variables are declared with an `=` and dereferenced with a `$`, e.g. `greeting="
   * Variable assignments have to be a single word; use quotes to wrap multiple variables
     * e.g. `usergreeting="$greeting, $USER"`
   *  **DO NOT** put spaces around `=` for variable assignment
+  * **FOR VALUES WITH SPACES** quotes *must* be used, e.g.
+  ```
+    directory="My directory"
+    echo "directory"
+  ```
 
+  * Utility `shellcheck` can be used to check the script for double quote misses
+  
 Shell variables **have no data type**, they simply store strings
 
 ### Command line arguments
@@ -36,3 +43,7 @@ Command line arguments may be referenced in incremental order as such: `$1` `$2`
 Only letters, numbers, and underscores are allowed 
   * First character of variable name must be a letter or underscore 
   * Case sensitive, but pre-defined variables use capital.  Best practice to only use lowercase
+
+## Debugging
+* Adding `-v` after the shebang (but on the same line) will cause the interpreter to print every line before trying to execute it
+* Adding `-x` will do the same as `-v`, but also print the value of variables
