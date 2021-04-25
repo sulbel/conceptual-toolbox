@@ -25,3 +25,14 @@ Variables are declared with an `=` and dereferenced with a `$`, e.g. `greeting="
   * Variable assignments have to be a single word; use quotes to wrap multiple variables
     * e.g. `usergreeting="$greeting, $USER"`
   *  **DO NOT** put spaces around `=` for variable assignment
+
+Shell variables **have no data type**, they simply store strings
+
+### Command line arguments
+Command line arguments may be referenced in incremental order as such: `$1` `$2` etc
+  * e.g. ./myScript.sh Hello - `echo $1` would print Hello
+
+### Naming conventions
+Only letters, numbers, and underscores are allowed 
+  * First character of variable name must be a letter or underscore 
+  * Case sensitive, but pre-defined variables use capital.  Best practice to only use lowercase
