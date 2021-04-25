@@ -32,7 +32,7 @@ Variables are declared with an `=` and dereferenced with a `$`, e.g. `greeting="
   ```
 
   * Utility `shellcheck` can be used to check the script for double quote misses
-  
+
 Shell variables **have no data type**, they simply store strings
 
 ### Command line arguments
@@ -47,3 +47,9 @@ Only letters, numbers, and underscores are allowed
 ## Debugging
 * Adding `-v` after the shebang (but on the same line) will cause the interpreter to print every line before trying to execute it
 * Adding `-x` will do the same as `-v`, but also print the value of variables
+* Adding -- after options indicates that this is the end of options. e.g. `mkdir -p -- $directory` 
+
+## Braces
+Use curly braces to contain a variable name within a command
+* e.g. `grep -- "$container" shipments.csv > "$directory/${container}_report.csv"` would write results of grep command to file with name $container_report.csv
+  * without surrounding container variable with curly braces, bash would treat $container_report as a variable
