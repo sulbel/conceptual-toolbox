@@ -49,7 +49,15 @@ Only letters, numbers, and underscores are allowed
 * Adding `-x` will do the same as `-v`, but also print the value of variables
 * Adding -- after options indicates that this is the end of options. e.g. `mkdir -p -- $directory` 
 
-## Braces
+### Braces
 Use curly braces to contain a variable name within a command
 * e.g. `grep -- "$container" shipments.csv > "$directory/${container}_report.csv"` would write results of grep command to file with name $container_report.csv
   * without surrounding container variable with curly braces, bash would treat $container_report as a variable
+
+## Best Practices
+1. Quote your variables
+2. Use braces to indicate where the variable name ends
+3. Take arguments, and save them as variables inside the script e.g. `directory="$1"`
+4. Use end of options `--` to handle cases where input may lead with -
+5. Add -x option to shebang line to assist with debugging
+
