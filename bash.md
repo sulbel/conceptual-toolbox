@@ -78,3 +78,7 @@ fi
   * A successful script execution will exit with return value 0
   * Keywords `if` `then` `else` `fi` **must** be first on a newline, or preceded by a semicolon
 
+* Test if a variable holds a specific string, i.e. `==`, by `[[ $variable = "stringName" ]]
+* Negate with `!`
+* And with `&&`
+* Or with `||`
