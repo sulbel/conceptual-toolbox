@@ -64,3 +64,17 @@ We can define a variable in the shell, and then run the `export` command in the 
 4. Use end of options `--` to handle cases where input may lead with -
 5. Add -x option to shebang line to assist with debugging
 
+## Conditional Execution
+
+### If/Else statements
+Syntax is `if ... then ... else ...` and `if` blocks are denoted as ending with the `fi` statement. e.g. to exit a script if no input arguments are supplied:
+
+```
+if [[ ! $1 ]]; then
+    echo "Error: missing input parameter"
+    exit 1
+fi
+```
+  * A successful script execution will exit with return value 0
+  * Keywords `if` `then` `else` `fi` **must** be first on a newline, or preceded by a semicolon
+
