@@ -5,6 +5,14 @@
 
 `WHERE` conditional filter(s)
 
+## Creating and Deleting
+* To create a database/table: `CREATE DATABASE dbName` or `CREATE TABLE tableName`
+* To delete a database/table: `DROP DATABASE dbName` or `DROP TABLE tableName`
+* Delete all data inside a table: `TRUNCATE TABLE tableName`
+* Add a column to table: `ALTER TABLE tableName ADD Birthday DATE;`
+* Delete column from table: `ALTER TABLE tableName DROP COLUMN Birthday;`
+
+
 ## Keys
 * A **primary key** uniquely identifies each record in a given table
   * e.g. a customer_id column within the customers table
