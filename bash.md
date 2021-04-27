@@ -54,6 +54,9 @@ Use curly braces to contain a variable name within a command
 * e.g. `grep -- "$container" shipments.csv > "$directory/${container}_report.csv"` would write results of grep command to file with name $container_report.csv
   * without surrounding container variable with curly braces, bash would treat $container_report as a variable
 
+### Export
+We can define a variable in the shell, and then run the `export` command in the shell before calling the script to make the variable available to child processes (like the shell script)
+
 ## Best Practices
 1. Quote your variables
 2. Use braces to indicate where the variable name ends
