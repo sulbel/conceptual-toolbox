@@ -14,4 +14,12 @@ Int, float, None, bools
  * `None` represents null
  * Bool has values (note capitalized) `True` and `False`
 
+ ## Collections
+ * Strings - can be enclosed by either single or double quotes, but must remain consistent
+   * Python strings are **immutable**
+ * Lists - sequences of objects
+   * Unlike strings, lists are **mutable**
+   * Can be extended across multiple lines to improve readability
+ * Dicts - key/value map declared with curly braces `{}`
+
  
