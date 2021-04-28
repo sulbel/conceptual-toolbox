@@ -22,4 +22,9 @@ Int, float, None, bools
    * Can be extended across multiple lines to improve readability
  * Dicts - key/value map declared with curly braces `{}`
 
- 
+ ## Modularity
+ * Functions are defined with keyword `def` and end with a colon, e.g. `def square(x):`
+   * The main function of a python program is `__main__`.  Place the main code like: `if __name__ == "__main__"`
+* Command line arguments: `import sys` and accessed via `sys.argv[1]` for the first command line argument
+* Shebang `#!/usr/bin/env python3` 
+
