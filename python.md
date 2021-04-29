@@ -20,6 +20,9 @@ Int, float, None, bools
  * Lists - sequences of objects
    * Unlike strings, lists are **mutable**
    * Can be extended across multiple lines to improve readability
+   * Can *slice* a list by indexing the range [n:m) e.g. a=[1, 2, 3]; a[0:2] = [1, 2]
+   * Can *reverse index* with negative indices i.e. [-1]
+   
  * Dicts - key/value map declared with curly braces `{}`
  * Tuples - immutable sequence of arbitrary objects
    * Declared by `()` 
