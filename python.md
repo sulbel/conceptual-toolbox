@@ -17,13 +17,19 @@ Int, float, None, bools
  ## Collections
  * Strings - can be enclosed by either single or double quotes, but must remain consistent
    * Python strings are **immutable**
+
  * Lists - sequences of objects
    * Unlike strings, lists are **mutable**
    * Can be extended across multiple lines to improve readability
    * Can *slice* a list by indexing the range [n:m) e.g. a=[1, 2, 3]; a[0:2] = [1, 2]
    * Can *reverse index* with negative indices i.e. [-1]
-   
+
  * Dicts - key/value map declared with curly braces `{}`
+   * Keys **must** be unique, but values can be duplicates
+   * Keys **must** be immutable
+
+* Sets - unordered collection of *unique* elements
+
  * Tuples - immutable sequence of arbitrary objects
    * Declared by `()` 
    * Once declared, objects may not be altered or inserted into the tuple
