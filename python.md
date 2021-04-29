@@ -21,6 +21,11 @@ Int, float, None, bools
    * Unlike strings, lists are **mutable**
    * Can be extended across multiple lines to improve readability
  * Dicts - key/value map declared with curly braces `{}`
+ * Tuples - immutable sequence of arbitrary objects
+   * Declared by `()` 
+   * Once declared, objects may not be altered or inserted into the tuple
+   * Useful for returning multiple objects from a function
+     * **Tuple unpacking** is when multiple variables are assigned to these return values, and the tuple is 'unpacked' when these objects are referenced individually 
 
  ## Modularity
  * Functions are defined with keyword `def` and end with a colon, e.g. `def square(x):`
@@ -31,3 +36,4 @@ Int, float, None, bools
   * This can cause strange behavior when the default argument is a *mutable* type, like a list, e.g. repeatedly appending a value
   * A solution to this is to supply value `None` to the default, and check if the object `is None`, then create a new object to operate with/return
 * To adjust a **global variable** within a function, use the `global` keyword, e.g. `global count = 5`
+* The `is` operator determines if 2 names refer to the same **object**, not if 2 objects are equal
