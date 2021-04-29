@@ -27,4 +27,7 @@ Int, float, None, bools
    * The main function of a python program is `__main__`.  Place the main code like: `if __name__ == "__main__"`
 * Command line arguments: `import sys` and accessed via `sys.argv[1]` for the first command line argument
 * Shebang `#!/usr/bin/env python3` 
-
+* Function default arguments are evaluated **once**, at program runtime
+  * This can cause strange behavior when the default argument is a *mutable* type, like a list, e.g. repeatedly appending a value
+  * A solution to this is to supply value `None` to the default, and check if the object `is None`, then create a new object to operate with/return
+* To adjust a **global variable** within a function, use the `global` keyword, e.g. `global count = 5`
