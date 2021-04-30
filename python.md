@@ -29,6 +29,10 @@ Int, float, None, bools
    * Keys **must** be immutable
 
 * Sets - unordered collection of *unique* elements
+  * mutable, but each element must be immutable
+  * add an element to a set with the `.add()` method
+    * multiple elements can be added with the `.update()` method
+  * very useful for relational algebra methods
 
  * Tuples - immutable sequence of arbitrary objects
    * Declared by `()` 
