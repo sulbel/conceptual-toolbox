@@ -24,6 +24,10 @@ High-level concepts:
 * Hosting on a container registry:
   * `docker image push maintainer/name:version`
   * Will push to dockerhub by default
+* Stopping and removing a container
+  * `docker ps` to obtain the container id
+  * `docker stop <id>`
+  * `docker rm <id>`
 
 
 ### Microservices
