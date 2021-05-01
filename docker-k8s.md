@@ -1,7 +1,9 @@
 # Docker and Kubernetes
 High-level concepts:
 * Can think of an image as like a stopped container, and a container as a running image
-* 
+* While a VM virtualizes hardware, containers virtualize an OS
+  * Containers share the kernel of their host OS
+
 
 
 ## Suitable Workloads
@@ -17,7 +19,14 @@ High-level concepts:
   * Running `exit` will terminate the container (since the shell is PID 1/main process)
     * Can exit the shell but leave container running with `ctrl + p + q`
     * Delete the exiting (but still running) container with `docker container rm test -f`
+* Hosting on a container registry:
+  * `docker image push maintainer/name:version`
+  * Will push to dockerhub by default
 
 
+### Microservices
+Docker compose can be used to describe multi-container apps
+* `docker-compose up` to bring the apps up
+* `docker-compose down` to bring the apps down
 
 ## Kubernetes
