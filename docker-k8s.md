@@ -14,6 +14,8 @@ High-level concepts:
 ## Docker
 * Building an image:
   * `docker image build -t maintain/name:version .`
+* Running in background mode:
+  * `docker run -d -p 80:80 docker/getting-started`
 * Running in interactive mode:
   * `docker container run -it --name test alpine sh`
   * Running `exit` will terminate the container (since the shell is PID 1/main process)
