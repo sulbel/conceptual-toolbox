@@ -43,4 +43,10 @@ Docker compose can be used to describe multi-container apps
 * `docker-compose up` to bring the apps up
 * `docker-compose down` to bring the apps down
 
+### Best Practices
+* Use official images
+* Keep images small
+* Be explicit in referencing images
+  * Use specific releases, not always latest
+
 ## Kubernetes
