@@ -49,4 +49,3 @@ Docker compose can be used to describe multi-container apps
 * Be explicit in referencing images
   * Use specific releases, not always latest
 
-## Kubernetes
