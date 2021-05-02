@@ -3,6 +3,9 @@ High-level concepts:
 * Can think of an image as like a stopped container, and a container as a running image
 * While a VM virtualizes hardware, containers virtualize an OS
   * Containers share the kernel of their host OS
+* Containers work primarily by `namespaces` and `cgroups`
+  * `namespaces` facilitate the isolation of process tree, filesystem, etc
+  * `cgroups`, short for control groups, govern the resource utilization of containers
 
 
 
@@ -28,6 +31,11 @@ High-level concepts:
   * `docker ps` to obtain the container id
   * `docker stop <id>`
   * `docker rm <id>`
+
+
+### Images
+An image is a bunch of independent layers that are loosely connected by a manifest file
+* These layers are unaware of the bigger image 
 
 
 ### Microservices
