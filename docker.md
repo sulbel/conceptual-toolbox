@@ -75,6 +75,18 @@ There are 2 main types of logs we are interested in: *daemon* logs and *containe
     * Set logging driver in `daemon.json`
 
 
+## Docker Swarm
+* Secure clustering:
+  * Working with a **cluster** of manager and worker containers, instead of single containers
+    * If the lead manager node goes down, a (follower) manager node is elected to be the new leader
+    * This distributed consensus management is handled by **Raft** 
+    *  Best practice is to have 3, 5, or 7 manager nodes; odd number helps prevent **"split brain"** outcome
+  * Can issue commands to the entire cluster, instead of individual containers
+  * Use of `autolock` (prevents restarted managers from automatically rejoining and prevents accidentally restoring old copies of the swarm)
+    * When creating a new swarm: `docker swarm init --autolock`
+    * Updating an existing swarm: `docker swarm update --autolock=true`
+
+
 
 ### Microservices
 Docker compose can be used to describe multi-container apps
