@@ -37,6 +37,28 @@ High-level concepts:
 An image is a bunch of independent layers that are loosely connected by a manifest file
 * These layers are unaware of the bigger image 
 
+#### Dockerfile
+A list of instructions for how to build an image of your app
+* Convention that all instructions are CAPITALIZED
+* Always starts with `FROM` base image (OS)
+  * Alpine is popular, e.g. `FROM alpine`
+* Next, usually want to `RUN` pulling in our backend
+  * e.g. for node: `RUN apk add --update nodejs nodejs-npm`
+* Next, want to copy our source code to the container OS image
+  * `COPY . /src`
+  * `WORKDIR /src`
+* Install code dependencies
+  * `RUN npm install`
+* Expose the port application binds on
+  * `EXPOSE 8080`
+* `ENTRYPOINT` for specifying where to run the app
+  * `ENTRYPOINT ["node", "./app.js"]`
+  * ./app.js is relative to the `WORKDIR` location
+* Finally, can build the image with `docker image build -t tag .`
+
+
+
+
 
 ### Microservices
 Docker compose can be used to describe multi-container apps
