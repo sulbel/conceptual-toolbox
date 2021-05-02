@@ -1,4 +1,4 @@
-# Docker and Kubernetes
+# Docker
 High-level concepts:
 * Can think of an image as like a stopped container, and a container as a running image
 * While a VM virtualizes hardware, containers virtualize an OS
@@ -37,7 +37,7 @@ High-level concepts:
 An image is a bunch of independent layers that are loosely connected by a manifest file
 * These layers are unaware of the bigger image 
 
-#### Dockerfile
+## Dockerfile
 A list of instructions for how to build an image of your app
 * Convention that all instructions are CAPITALIZED
 * Always starts with `FROM` base image (OS)
@@ -55,6 +55,11 @@ A list of instructions for how to build an image of your app
   * `ENTRYPOINT ["node", "./app.js"]`
   * ./app.js is relative to the `WORKDIR` location
 * Finally, can build the image with `docker image build -t tag .`
+
+
+### Multistage Builds
+* A single Dockerfile that has multiple `FROM` instructions
+  * Each `FROM` marks a stage of the build
 
 
 
