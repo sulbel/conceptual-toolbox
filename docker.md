@@ -62,6 +62,17 @@ A list of instructions for how to build an image of your app
   * Each `FROM` marks a stage of the build
 
 
+### Logging
+There are 2 main types of logs we are interested in: *daemon* logs and *container* logs
+* Daemon logs are the logs from the docker daemon
+  * Most modern linux systems use systemd, which get sent to journald
+  * Can read these logs with command `journalctl -u docker.service`
+  * Non-systemd, try `/var/log/messages`
+  * Windows, try `~/AppData/Local/Docker`
+* Container logs aka application logs
+  * Docker hopes that apps log to `stdout` and `stderr`
+  * Also supports logging drivers, such as Splunk
+    * Set logging driver in `daemon.json`
 
 
 
