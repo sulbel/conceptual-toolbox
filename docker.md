@@ -14,7 +14,7 @@ High-level concepts:
   * This has changed over the last few years
 
 
-## Docker
+## Basic Docker Commands
 * Building an image:
   * `docker image build -t maintain/name:version .`
 * Running in background mode:
@@ -86,6 +86,24 @@ There are 2 main types of logs we are interested in: *daemon* logs and *containe
     * When creating a new swarm: `docker swarm init --autolock`
     * Updating an existing swarm: `docker swarm update --autolock=true`
 
+
+## Container Networking
+Network types:
+* Bridge network - oldest and most common, turned on by default
+  * Each container gets its own IP on the bridge network (layer 2)
+  * Containers on separate bridges are unable to communicate, even if they are on the same host
+    * Can communicate via port mapping *on the host*
+* Overlay network - aka multi-host networks
+  * Single layer 2 network spanning multiple hosts
+  * Create with command `docker network create` - `-o encrypted` encrypts the data plane
+  * Control plane is encrypted by default
+* MACVLAN - Every container gets its own IP **and** MAC address *on the existing network*
+  * Containers can be visible as first-class citizens on the existing VLAN
+* Command `docker network inspect <name>` to display information about specific network
+  * Command `docker network ls` to display all networks
+
+
+* Network Services:
 
 
 ### Microservices
