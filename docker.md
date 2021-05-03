@@ -88,7 +88,7 @@ There are 2 main types of logs we are interested in: *daemon* logs and *containe
 
 
 ## Container Networking
-Network types:
+### Network types:
 * Bridge network - oldest and most common, turned on by default
   * Each container gets its own IP on the bridge network (layer 2)
   * Containers on separate bridges are unable to communicate, even if they are on the same host
@@ -103,7 +103,15 @@ Network types:
   * Command `docker network ls` to display all networks
 
 
-* Network Services:
+### Network Services:
+* Service Discovery
+  * Every new service gets a name
+  * Names are registered with Swarm DNS
+  * Every service uses Swarm DNS
+  * Network scoped - all services can access all other services on the same network (e.g. with `ping <serviceName>`), but **can not** reach services outside the network
+* Load balancing
+  * Via Ingress load balancing, external clients can access a swarm service via any node within the swarm
+    * Even if the node is not running the service, hitting that node with a service request will get load balanced to a node that *is* running the service
 
 
 ### Microservices
