@@ -114,6 +114,21 @@ There are 2 main types of logs we are interested in: *daemon* logs and *containe
     * Even if the node is not running the service, hitting that node with a service request will get load balanced to a node that *is* running the service
 
 
+### Volumes and Persistent Data
+Typical container storage is non-persistant (is deleted when the container is stopped/destroyed and created anew on startup)
+**Volume storage** needs to be specifically created, and lives outside of the container
+* Mounted inside of the container at a specific mount point
+* A volume can be attached to more than one container
+* Commands:
+  * Create with `docker volume create <name>`
+  * `docker volume inspect <name>`
+  * `docker volume ls`
+  * `docker volume rm <name(s)>`
+  * Mount a volume like: `docker container run -dit --name voltest --mount source=voltest,target=/vol alpine:latest`
+    * The `source=` bit is the name of the volume; `target=` is the location to mount the volume inside the container
+
+
+
 ### Microservices
 Docker compose can be used to describe multi-container apps
 * `docker-compose up` to bring the apps up
