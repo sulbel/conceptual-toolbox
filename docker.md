@@ -137,6 +137,17 @@ Secrets are anything you want to tell your app that is sensitive, e.g. passwords
 * Secrets have a maximum filesize of 500kB
 
 
+## Stacks and Services
+Individual code files form the basis of *containers* -> Containers form the basis of multi-container *Services* -> Services form the basis of *Stacks*
+* `docker stack deploy -c stackfile.yml <name>`
+* If we need to scale replicas up, are able to do it imperatively via command line
+  * However, this will get overwritten next time the deployment yaml is executed
+  * **Best practice** to update the replica count in `stackfile.yml` and rerun the deploy command
+
+
+
+
+
 ### Microservices
 Docker compose can be used to describe multi-container apps
 * `docker-compose up` to bring the apps up
