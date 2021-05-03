@@ -128,6 +128,14 @@ Typical container storage is non-persistant (is deleted when the container is st
     * The `source=` bit is the name of the volume; `target=` is the location to mount the volume inside the container
 
 
+### Secrets
+Secrets are anything you want to tell your app that is sensitive, e.g. passwords, certs, but even names of services. **REQUIRES SWARM MODE**
+* Create a secret with command `docker secret create <secretName> <fileName>`
+  * Sends the secret to a manager, who places it in the store where it is encrypted at rest
+* Create a `swarm service` with the `--secret` flag
+  * Workers that *are not* running the service have no knowledge of the secret
+* Secrets have a maximum filesize of 500kB
+
 
 ### Microservices
 Docker compose can be used to describe multi-container apps
