@@ -145,6 +145,18 @@ Individual code files form the basis of *containers* -> Containers form the basi
   * **Best practice** to update the replica count in `stackfile.yml` and rerun the deploy command
 
 
+## Enterprise Tooling
+Universal Control Plane:
+  * A GUI-based swarm-cluster manager for containers
+
+Docker Trusted Registry:
+  * A dockerhub that you can deploy behind your own firewall
+
+
+* UCP also offers role-based access control, image scanning, and many more features
+* Layer 7 load balancing
+  * Swarm mode provides layer 4 (transport) load balancing
+  * Docker EE provides application layer 7 load balancing features
 
 
 
