@@ -52,3 +52,6 @@ Since pods are constantly scaling up and down, and each pod has its own unique I
 
 
 ### Deployments
+Pods by themselves lack the ability to scale/self-heal/etc.  These features are provided by wrapping the pods with higher-level deployment objects
+* Deployment controller/reconciliation loop watches API server for new deployments and implements them when requested. This is facilitated by constantly comparing the *observed state* with the *desired state*
+* Replicaset controller manages the number of replicates, or duplicated pods
