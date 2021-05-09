@@ -45,5 +45,10 @@ Pods are the most fundamental unit of work in Kubernetes
   * Generally, multi-container pods **are not recommended** and reserved for special use cases
 
 
+### Services
+Since pods are constantly scaling up and down, and each pod has its own unique IP address, it would be complex to manage the communication to/from individual pods in a cluster
+* This is where services come in to play.  We place a `service` in front of pods, and the services provides a stable name and IP to interface and load balance with the pods behind it
+  * Load balancing mechanism is handled by the label selector
+
 
 ### Deployments
