@@ -35,9 +35,15 @@ AKA control plane or head nodes, the intelligence of the cluster
   * Network brains of the node
   * Ensures every pod gets own unique IP
   * Lightweight load balancing across all of the pods behind a service
-  
+
 
 ### Pods
+Pods are the most fundamental unit of work in Kubernetes
+* Pods *wrap containers*; Kubernetes can only manage **pods**, not containers
+* Pods are *shared execution environments* - e.g. can have multiple containers inside a single pod, but they all share a single IP. Thus, to access the *containers* need to specify the relevant *port*
+* All containers in the same pod share the same resources
+  * Generally, multi-container pods **are not recommended** and reserved for special use cases
+
 
 
 ### Deployments
