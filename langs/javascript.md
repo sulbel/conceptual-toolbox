@@ -29,3 +29,7 @@
 * Logical and has keyword `&&`
 * Logical or has keyword `||`
 
+## Switch statements
+* Switch statements are tested with **strict equality** (`===`)
+* Keyword `break` is used to stop execution of the switch statement
+* The `default` statement is executed if no cases match
