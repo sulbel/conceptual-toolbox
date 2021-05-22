@@ -42,3 +42,11 @@
 * Can delete properties with `delete`
 * Check if object has a particular property with `.hasOwnProperty(propName)`
 
+
+## Loops
+* Common `while()`, `for()`, `do..while()` loops
+
+## Conversions
+* Convert a string to number with `parseInt()` function
+  * If the *first* character in the string cannot be converted to int, returns `NaN`
+* Can call `parseInt()` with a radix, e.g. to convert a binary string to integer: `parseInt("11", 2);`
