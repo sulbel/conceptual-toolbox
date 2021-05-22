@@ -33,3 +33,12 @@
 * Switch statements are tested with **strict equality** (`===`)
 * Keyword `break` is used to stop execution of the switch statement
 * The `default` statement is executed if no cases match
+
+## Objects
+* Similar to arrays, except you access data via `properties` with dot-notation or bracket-notation
+  * **MUST** use bracket notation for properties that have spaces in the name
+* Can assign new values to properties
+* Can add new properties to existing objects
+* Can delete properties with `delete`
+* Check if object has a particular property with `.hasOwnProperty(propName)`
+
