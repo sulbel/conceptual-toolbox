@@ -7,6 +7,14 @@ Kubernetes originages from Google, who has a need to orchestrate billions of con
 
 ## Kubernetes Architecture
 
+### Declaritive Model and Desired State
+* We give the K8s cluster a declaritive manifest file which describes its desired state
+  * Description of what things *should* look like
+  * Posted to API server, K8s does whatever necessary to get us to that desired state
+  * If something changes or goes wrong, and the observed state drifts from desired state (e.g. a node fails), K8s will attempt to reconcile the cluster to return to desired state
+  
+
+
 ### Masters
 AKA control plane or head nodes, the intelligence of the cluster
 * Since the masters are effectively in charge of running the cluster, having multiple masters running helps to ensure high availability
