@@ -12,7 +12,7 @@ Kubernetes originages from Google, who has a need to orchestrate billions of con
   * Description of what things *should* look like
   * Posted to API server, K8s does whatever necessary to get us to that desired state
   * If something changes or goes wrong, and the observed state drifts from desired state (e.g. a node fails), K8s will attempt to reconcile the cluster to return to desired state
-  
+
 
 
 ### Masters
@@ -49,9 +49,13 @@ AKA control plane or head nodes, the intelligence of the cluster
 Pods are the most fundamental unit of work in Kubernetes
 * Pods *wrap containers*; Kubernetes can only manage **pods**, not containers
 * Pods are *shared execution environments* - e.g. can have multiple containers inside a single pod, but they all share a single IP. Thus, to access the *containers* need to specify the relevant *port*
+  * Containers within the *same pod* may communicate via localhost
 * All containers in the same pod share the same resources
   * Generally, multi-container pods **are not recommended** and reserved for special use cases
-
+* **Service mesh** typically inject an additional container into each pod
+  * This service mesh container sits inbetween the main app container and the network
+  * Handles things like encrypt/decrypt traffic between network and app container, expose telemetry, and other network functions
+  
 
 ### Services
 Since pods are constantly scaling up and down, and each pod has its own unique IP address, it would be complex to manage the communication to/from individual pods in a cluster
