@@ -55,7 +55,7 @@ Pods are the most fundamental unit of work in Kubernetes
 * **Service mesh** typically inject an additional container into each pod
   * This service mesh container sits inbetween the main app container and the network
   * Handles things like encrypt/decrypt traffic between network and app container, expose telemetry, and other network functions
-  
+
 
 ### Services
 Since pods are constantly scaling up and down, and each pod has its own unique IP address, it would be complex to manage the communication to/from individual pods in a cluster
@@ -70,6 +70,15 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
 
 
 ## Pods in Detail
+* General process is take app source code -> convert to image -> store image in repository -> define in K8s manifest -> post manifest to K8s API
+* Pods are part of the *core API* - referenced in .yml manifest with `version: v1`
+* Post a pod manifest with command: `kubectl pply -f pod.yml`
+  * Get state of pod with `kubectl get pods --watch`
+  * For detailed info: `kubectl describe pods <pod_name>`
+* An example of multi-container pod:
+  * 'Main' app container nginx on port 80
+  * 'Helper' container on port 9113, exposing the nginx logs to a prometheus helper; "in a format that prometheus likes"
+* **Delete** pods with: `kubectl delete -f <pod_manifest.yml>`
 
 
 
