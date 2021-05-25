@@ -177,3 +177,13 @@ parameters:
 * Two containers within the same pod share the same resources, like memory, storage, network interface..
   * Allows for communication over localhost, or mechanisms like IPC
 
+#### Init Pattern
+
+
+#### Sidecar Pattern
+
+
+#### Adapter Pattern
+
+
+#### Ambassador Pattern
