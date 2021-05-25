@@ -153,6 +153,21 @@ spec:
     pdName: my-vol
 ```
 
-
+#### Dynamic Provisioning
+* About making volume creation dynamic, and making different classes/tiers of volumes
+* Of kind `StorageClass` : 
+```
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: ps-gcp-fast
+  annotations:
+    storageclass.kubernetes.io/id-default-class: "true"
+provisioner: kubernetes.io/gce-pd
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: pd-ssd
+  replication-type: none
+```
 
 ## Multi-Container Pods
