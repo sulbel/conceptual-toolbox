@@ -134,6 +134,24 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
   * Once a pod makes a claim and the pv is bound, **no other pod can claim it** 
     * But *all* containers within the pod may access the persistent volume
 
+#### Static Provisioning
+* Drawback - does not scale well
+* Example: suppose you have a 50G volume storage in AWS/Google/Azure/On-prem/etc. The `PersistentVolume` manifest .yml would look like this:
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: my-fast
+  capacity:
+    storage: 50Gi
+  persistentVolumeReclaimPolicy: Retain
+  gcePersistentDisk:
+    pdName: my-vol
+```
 
 
 
