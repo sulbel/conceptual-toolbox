@@ -81,9 +81,31 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
 * **Delete** pods with: `kubectl delete -f <pod_manifest.yml>`
 
 
-
-
 ## Services in Detail
+* The way to expose kubernetes pods to the local network and to the outside world
+* Recall that pods each have their own IP, but **this IP address is internal to the cluster**
+  * This is where services come in to play
+  * Service "front end" has an IP and a port that can be accessed from the internet
+  * Service "back end" is a load balancer that proxies requests to the cluster nodes
+* Service IP is automatically assigned by K8s and called the **clusterIP**
+  * Only for use inside the cluster
+* `Name` is the name of the service and gets registered with DNS
+  * Every cluster gets an internal DNS service provided by CoreDNS technology
+  * Every container in every pod gets the internal DNS details
+* 'Back end' load balancing is facilitated by the `labels` described in manifest
+* Accessing from outside the cluster facilitated by **NodePort**
+  * Range of 30000-32767
+  * NodePort mapped on every cluster node to point back to the service cluster IP
+  * We can sit outside the cluster, and send a request to one of the nodes at the *NodePort*, and have the request routed to one of the pods behind that service
+* In manifest, `type: LoadBalancer` 
+  * `Port:` specifies **external** port to listen on
+  * `TargetPort:` specifies **internal** port to route to cluster
+  * Matches service to pods via `Selector: <label>`
+* Manifest ports explained:
+  * `Port: 80` - the port that the service listens on *inside the cluster*; tied to the *cluster IP*
+  *  `TargetPort: 8080` - the port that the app inside the container is listening on
+  * `NodePort: 31111` - the external port mapped on every cluster **node**
+* `Selector:` field has to match the `Label:` field **of the pod**
 
 
 
