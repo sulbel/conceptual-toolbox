@@ -171,3 +171,9 @@ parameters:
 ```
 
 ## Multi-Container Pods
+### Pod theory
+* Pods are smallest unit of execution
+* Pods wrap a container, adding augmented features like probes, affinities, restart policies, termination control....
+* Two containers within the same pod share the same resources, like memory, storage, network interface..
+  * Allows for communication over localhost, or mechanisms like IPC
+
