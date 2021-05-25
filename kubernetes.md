@@ -190,7 +190,10 @@ parameters:
 * One use-case is if you want to continuously pull git repo, instead of just during initialization
 
 #### Adapter Pattern
-
+* A type of sidecar container
+* Common to use Prometheus as a monitoring tool
+  * Create helper container to format application logs in the format Prometheus desires
+* Since both containers within the pod share localhost, adapter container can scrape main app endpoint on localhost, transform output to format prometheus needs, and expose those logs on a different endpoint in localhost
 
 
 #### Ambassador Pattern
