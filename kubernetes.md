@@ -186,9 +186,11 @@ parameters:
 
 
 #### Sidecar Pattern
-
+* Starts alongside app container and runs concurrently
+* One use-case is if you want to continuously pull git repo, instead of just during initialization
 
 #### Adapter Pattern
+
 
 
 #### Ambassador Pattern
