@@ -118,5 +118,23 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
 
 ## Storage in Kubernetes
 
+#### Decoupling Application & Data Lifecycles
+* Normally, data only persists in containers between starts and stops
+  * When container fails, or is deleted, the data is destroyed as well
+* For stateful apps, like a customer order system, need to keep this data alive
+  * This is accomplished by decoupling the data from the app
+  * Like pods, `volumes` are created as their own objects. Volumes can get mounted to containers and remain independent of container lifecycle
+
+#### `Persistent Volume` Subsystem
+* We have some external storage that *is not* part of K8s cluster; we need some way to make this storage accessible by our pods/cluster
+* Map this external volume to the kubernetes `persistent volume` (pv) object
+  * Once we've done this mapping, it is available to kubernetes
+  * "Claimed" with `persistent volume claim` (pvc) k8s API object
+  * Pods need to reference this pvc in its manifest .yml
+  * Once a pod makes a claim and the pv is bound, **no other pod can claim it** 
+    * But *all* containers within the pod may access the persistent volume
+
+
+
 
 ## Multi-Container Pods
