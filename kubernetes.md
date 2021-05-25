@@ -114,3 +114,9 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
   * In the background, `replicaset` controller watches to make sure there is always n-replicas of the right spec running
 * `Replicas:` in deployment manifest controls how many pods are created/managed
 * Just like pod and services: `kubectl apply -f deployment.yml`
+
+
+## Storage in Kubernetes
+
+
+## Multi-Container Pods
