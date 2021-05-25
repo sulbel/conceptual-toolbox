@@ -108,5 +108,9 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
 * `Selector:` field has to match the `Label:` field **of the pod**
 
 
-
 ## Deployments in Detail
+* Where the scaling, self-healing, rolling update magic happens
+* Create a deployment .yml with the desired state -> post to API -> athN and athZ -> config stored in the cluster store -> pods get scheduled to nodes in the cluster
+  * In the background, `replicaset` controller watches to make sure there is always n-replicas of the right spec running
+* `Replicas:` in deployment manifest controls how many pods are created/managed
+* Just like pod and services: `kubectl apply -f deployment.yml`
