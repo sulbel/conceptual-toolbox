@@ -178,6 +178,11 @@ parameters:
   * Allows for communication over localhost, or mechanisms like IPC
 
 #### Init Pattern
+* When you need to configure an environment before an application is ready to start
+  * Cloning a git repo, waiting for an API to be up and responding, etc
+* K8s gaurantees an init container to start *before* the app container, and that it will only run once
+* In the `spec:` portion of manifest, use `initContainers:` instead of `containers:`
+* If more than one `initContainer`, they will always run sequentially, never in parallel
 
 
 #### Sidecar Pattern
