@@ -197,3 +197,6 @@ parameters:
 
 
 #### Ambassador Pattern
+* Another type of sidecar container
+* Sits between main app container and any external systems
+* One use-case: main app sends external requests to localhost on port 9000. Ambassador listens to localhost:9000, and proxies any requests made by the main app to the external system
