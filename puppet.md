@@ -23,3 +23,25 @@
   * Each master can handle 1000+ client agents
 * Slaves run an **agent service**
   * Agent service initiates a *catalog request* from the master at regular intervals (30 minutes by default)
+
+## Prepping a "base" VM
+* To-do list:
+  * Configure the Puppet repo
+  * Add 'puppet' to path
+  * Install NTP
+  * Include puppet *master* IP in 'hosts' file
+  * Install the Linux development libraries
+* Setting a CentOS IP address:
+```
+nmcli c mod <ens32> ipv4.method manual \
+                    ipv4.addr "10.10.10.101/24" \
+                    ipv4.dns 10.10.10.2 \
+                    gw4 10.10.10.2
+
+nmcli c up <ens32>
+```
+* Setting a hostname:
+`hostnamectl set-hostname puppet.host.name`
+
+* Enabling the `NTP` service: `systemctl enable --now ntpd`
+
