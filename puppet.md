@@ -47,3 +47,15 @@ nmcli c up <ens32>
 
 * Punching holes in the firewall: `firewall-cmd --add-port=5432/tcp --perm`
 
+
+## Manifests and Classes
+
+### Manifests
+* A simple resource, in a file named `greeting.pp`:
+```
+notify {'Course':
+  message => 'Getting started with Puppet',
+}
+```
+* Check if code is free of syntax errors with `puppet parser validate <path/to/file>`
+* Run the Manifest with `puppet apply <path/to/file>`
