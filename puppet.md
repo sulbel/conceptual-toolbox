@@ -45,3 +45,5 @@ nmcli c up <ens32>
 
 * Enabling the `NTP` service: `systemctl enable --now ntpd`
 
+* Punching holes in the firewall: `firewall-cmd --add-port=5432/tcp --perm`
+
