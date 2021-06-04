@@ -72,7 +72,7 @@ Pods by themselves lack the ability to scale/self-heal/etc.  These features are 
 ## Pods in Detail
 * General process is take app source code -> convert to image -> store image in repository -> define in K8s manifest -> post manifest to K8s API
 * Pods are part of the *core API* - referenced in .yml manifest with `version: v1`
-* Post a pod manifest with command: `kubectl pply -f pod.yml`
+* Post a pod manifest with command: `kubectl apply -f pod.yml`
   * Get state of pod with `kubectl get pods --watch`
   * For detailed info: `kubectl describe pods <pod_name>`
 * An example of multi-container pod:
