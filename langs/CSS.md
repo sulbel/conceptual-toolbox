@@ -31,6 +31,15 @@ Each HTML element can also have an `id` attribute
     * However, `id` takes precedence over `class` -> if both are applied with conflicting styles, the `id` styling will be applied
     * `id` style is referenced with `#` instead of `.`
 
+## Spacing
+* All HTML elements can be thought of as 'little rectangles'
+* 3 important properties control the space surrounding HMTL elements:
+  * Padding - amount of space between the element's *content* and *border*
+    * Padding controls the space **inside** the element
+  * Margin - amount of space between elements *border* and surrounding elements
+    * Margin controls the space **outside** the element
+
+
 
 
 ## Common properties
@@ -46,4 +55,5 @@ border-width | width of a border
 border-style | style of a border; solid etc
 border-radius | round the corners of a border
 background-color | set the background color of an element
+padding | distance between the content and border surrounding it
 
