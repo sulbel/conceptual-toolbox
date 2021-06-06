@@ -69,6 +69,9 @@ A pseudo class is a keyword that can be used to select a specific state of an el
 * Locks an element in place, relative to its parent container
 * Unlike relative positioning, removes the element from the normal flow of the HMTL document
 
+### Fixed Positioning
+* Elements with a fixed position do not move when the user scrolls the webpage (like a navbar)
+* Like absolute positioning, removes the element from the normal flow of the HMTL document
 
 
 ## Common properties
