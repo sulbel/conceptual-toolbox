@@ -68,4 +68,6 @@ border-style | style of a border; solid etc
 border-radius | round the corners of a border
 background-color | set the background color of an element
 padding | distance between the content and border surrounding it
+text-align | justify -> fill lines to edge; center; left; right
+
 
