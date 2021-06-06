@@ -52,6 +52,12 @@ Can also style based on attribute selectors, e.g. to style a form's checkbox: `[
 * Variables are usually defined in the `:root` element of the style sheet, so that all selectors may inherit from it 
   * Variables may be (locally) overwritten in specific classes, without changing the global value
 
+## Pseudo Classes
+A pseudo class is a keyword that can be used to select a specific state of an element
+  * e.g. the a:hover{color: blue;} will change the color of an anchor link when the element is hovered
+
+
+
 
 
 ## Common properties
@@ -69,5 +75,8 @@ border-radius | round the corners of a border
 background-color | set the background color of an element
 padding | distance between the content and border surrounding it
 text-align | justify -> fill lines to edge; center; left; right
-
+box-shadow | applies one or more shadows to an element
+opacity | how opaque an item is; 1 is fully opaque, 0 is fully transparent
+text-transform | adjusts text without changing the HTML
+line-height | adjust the height of each line in a block of text
 
