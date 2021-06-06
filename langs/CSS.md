@@ -56,7 +56,12 @@ Can also style based on attribute selectors, e.g. to style a form's checkbox: `[
 A pseudo class is a keyword that can be used to select a specific state of an element
   * e.g. the a:hover{color: blue;} will change the color of an anchor link when the element is hovered
 
-
+## Relative Positioning
+* CSS treats each HTML element as its own box, usually referred to as the *CSS Box Model*
+* Can specify an element to have `position: relative;`, allowing the item to be moved based off its relevative position
+  * Pairs with offset properties `top` `bottom` `left` and `right`
+    * The offset says how much distance to move the element **away** from the direction specified (i.e. `bottom: 25px;` moves the element 25 pixels *away* from the bottom, or 25 pixels up)
+  * Other elements still 'think' the element is at the location specified in the HTML
 
 
 
