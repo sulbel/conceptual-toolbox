@@ -90,6 +90,13 @@ A pseudo class is a keyword that can be used to select a specific state of an el
   * Arguments to `linear-gradient()`: direction gradient starts (90deg is horizontal), 2->n arguments specify the order of colors used
 * Can also use the `repeating-linear-gradient()` to have the pattern repeat
 
+## Transform
+* The `transform` property allows scaling of elements
+* An interesting use-case is with the `:hover` pseudo-class, to make elements scale when hovered
+
+
+
+
 ## Common properties
 
 Property | Description
@@ -110,4 +117,5 @@ opacity | how opaque an item is; 1 is fully opaque, 0 is fully transparent
 text-transform | adjusts text without changing the HTML
 line-height | adjust the height of each line in a block of text
 z-index | controls the layering of elements; higher values appear on top of lower valued elements
+transform | change the size of an element
 
