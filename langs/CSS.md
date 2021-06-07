@@ -73,6 +73,19 @@ A pseudo class is a keyword that can be used to select a specific state of an el
 * Elements with a fixed position do not move when the user scrolls the webpage (like a navbar)
 * Like absolute positioning, removes the element from the normal flow of the HMTL document
 
+### Centering a Div
+* One way to center a div is to apply the `margin: auto;` property
+* This also works for images.  Images are normally inline elements, but may be changed to block elements with the `display: block;` property
+
+## Colors
+### HSL
+* Added in **CSS3**, HSL allows for specifying colors beyond names or hex codes
+* HSL is useful when you have a base hue that you like, but need different variations of it
+* `Hue` is the base color, based on a 360-degree color wheel
+* `Saturation` is how much grey the hue has. A value of 0 is nearly full grey; a value of 100 is fully saturated with nearly no grey
+* `Lightness` is how much white or black exists. A value of 100 is fully white; 0 is fully black
+
+
 
 ## Common properties
 
@@ -93,4 +106,5 @@ box-shadow | applies one or more shadows to an element
 opacity | how opaque an item is; 1 is fully opaque, 0 is fully transparent
 text-transform | adjusts text without changing the HTML
 line-height | adjust the height of each line in a block of text
+z-index | controls the layering of elements; higher values appear on top of lower valued elements
 
