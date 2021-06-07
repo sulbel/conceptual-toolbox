@@ -85,7 +85,10 @@ A pseudo class is a keyword that can be used to select a specific state of an el
 * `Saturation` is how much grey the hue has. A value of 0 is nearly full grey; a value of 100 is fully saturated with nearly no grey
 * `Lightness` is how much white or black exists. A value of 100 is fully white; 0 is fully black
 
-
+### Linear Gradient
+* Create a background linear gradient with `background: linear-gradient();`
+  * Arguments to `linear-gradient()`: direction gradient starts (90deg is horizontal), 2->n arguments specify the order of colors used
+* Can also use the `repeating-linear-gradient()` to have the pattern repeat
 
 ## Common properties
 
